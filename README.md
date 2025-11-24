@@ -28,12 +28,13 @@ Make sure you have the following installed:
 
 
 ## 2. Project Structure
-
+```bash
 .
 ├── README.md
 ├── cv_English/
 ├── cv_Français/
 └── cv_translation
+```
 
 ## 3. Contributing
 
