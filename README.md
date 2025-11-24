@@ -33,7 +33,7 @@ Make sure you have the following installed:
 ├── README.md
 ├── cv_English/
 ├── cv_Français/
-└── cv_translation
+└── cv_translation.py
 ```
 
 ## 3. Contributing

@@ -1,0 +1,171 @@
+
+\documentclass[letterpaper,11pt]{{article}}
+\usepackage{{latexsym}}
+\usepackage[empty]{{fullpage}}
+\usepackage{{titlesec}}
+\usepackage{{marvosym}}
+\usepackage[usenames,dvipsnames]{{color}}
+\usepackage{{verbatim}}
+\usepackage{{enumitem}}
+\usepackage[hidelinks]{{hyperref}}
+\usepackage{{fancyhdr}}
+\usepackage[english]{{babel}}
+\usepackage{{tabularx}}
+\input{{glyphtounicode}}
+
+\pagestyle{{fancy}}
+\fancyhf{{}} 
+\fancyfoot{{}}
+\renewcommand{{\headrulewidth}}{{0pt}}
+\renewcommand{{\footrulewidth}}{{0pt}}
+\addtolength{{\oddsidemargin}}{{-0.5in}}
+\addtolength{{\evensidemargin}}{{-0.5in}}
+\addtolength{{\textwidth}}{{1in}}
+\addtolength{{\topmargin}}{{-.5in}}
+\addtolength{{\textheight}}{{1.0in}}
+\urlstyle{{same}}
+\raggedbottom
+\raggedright
+\setlength{{\tabcolsep}}{{0in}}
+
+\titleformat{{\section}}{{
+  \vspace{{-4pt}}\scshape\raggedright\large
+}}{{}}{{0em}}{{}}[\color{{black}}\titlerule \vspace{{-5pt}}]
+
+\newcommand{{\resumeItem}}[1]{{
+  \item\small{{
+    {{#1 \vspace{{-2pt}}}}
+  }}
+}}
+
+\newcommand{{\resumeSubheading}}[4]{{
+  \vspace{{-2pt}}\item
+    \begin{tabular*}{{0.97\textwidth}}[t]{{l@{{\extracolsep{{\fill}}}}r}}
+      \textbf{{#1}} & #2 \\
+      \textit{{\small#3}} & \textit{{\small #4}} \\
+    \end{tabular*}\vspace{{-7pt}}
+}}
+
+\newcommand{{\resumeProjectHeading}}[2]{{
+    \item
+    \begin{tabular*}{{0.97\textwidth}}{{l@{{\extracolsep{{\fill}}}}r}}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{{-7pt}}
+}}
+
+\newcommand{{\resumeSubHeadingListStart}}{{\begin{{itemize}}[leftmargin=0.15in, 
+label={{}}]}}
+\newcommand{{\resumeSubHeadingListEnd}}{{\end{{itemize}}}}
+\newcommand{{\resumeItemListStart}}{{\begin{{itemize}}}}
+\newcommand{{\resumeItemListEnd}}{{\end{{itemize}}\vspace{{-5pt}}}}
+
+\begin{{document}}
+
+\begin{{center}}
+    \textbf{{\Huge \scshape Louis BAFFOUR}} \\ \vspace{{3pt}}
+    \textbf{{\large Master ès sciences en informatique}} \\ \vspace{{1pt}}
+    \small Diplôme d'Ingénieur program - Expected in 2027 \\ \vspace{{5pt}}
+    \small
+    
+\href{{mailto:Louis.baffour@reseau.eseo.fr}}{{\underline{{Louis.baffour@reseau.eseo.fr}}}} 
+$|$ 
+    
+\href{{https://linkedin.com/in/louis-baffour}}{{\underline{{linkedin.com/in/louis-baffour}}}} 
+$|$
+    \href{{https://github.com/SlashFR1}}{{\underline{{github.com/SlashFR1}}}} $|$
+    +33 7 66 44 00 89
+\end{{center}}
+
+\section{{Profil}}
+\small{{
+Étudiant en ingénierie polyvalent et orienté résultats 
+spécialisé en informatique et électronique. Maîtrise du cross-fonctionnel 
+résolution de problèmes et développement de projets tout au long du cycle de vie, avec une expérience avérée dans 
+intégrer des technologies disparates pour fournir des solutions robustes et évolutives. Cherchant 
+appliquer ses compétences en conception d'architecture système et en optimisation des performances pour aider 
+les entreprises relèvent des défis complexes et contribuent à des projets innovants.
+}}
+\vspace{{5pt}}
+
+\section{{Éducation}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {{ESEO | Diplôme d'Ingénieur (Master's Degree equiv.)}}{{Angers, France}}
+      {{Spécialisée en électronique, informatique et télécommunications.}}{{Septembre 2022 - juillet 2027 (prévu)}}
+    \resumeSubheading
+      {{KU Leuven | Semestre d'échange}}{{Leuven, Belgium}}
+      {{Cours d'ingénierie technologique dispensés entièrement en anglais.}}{{Février 2024 -- juillet 2024}}
+  \resumeSubHeadingListEnd
+
+\section{{Compétences techniques}}
+ \begin{{itemize}}[leftmargin=0.15in, label={{}}]
+    \small{{\item{{
+     \textbf{{IA et apprentissage automatique}}}{{: TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy}} \\
+     \textbf{{Embarqué et électronique}}}{{: C, C++, VHDL, STM32, ARM Cortex-M, RISC-V, 
+FPGA, LTspice}} \\
+     \textbf{{Développement de logiciels}}}{{: Python, Java, JavaScript, SQL, Bash, Git}} \\
+     \textbf{{Web et nuage}}}{{: React, Node.js, HTML/CSS, MySQL, Docker, Microsoft 
+Azure}} \\
+     \textbf{{Réseaux et cybersécurité}}}{{: Wireshark (Packet Analysis), TCP/IP Suite 
+(HTTP/S, DNS, TCP/UDP)}} \\
+     \textbf{{Compétences générales}}}{{: Propriété et proactivité, communication, travail d'équipe, résolution de problèmes, adaptabilité}} \\
+     \textbf{{Langues}}}{{: Français (langue maternelle), anglais (C1 - Compétence professionnelle complète), espagnol (B1 - Intermédiaire)}}
+    }}}}
+ \end{{itemize}}
+
+\section{{Expérience Professionnelle}}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {{Stagiaire IA et Systèmes Embarqués}}{{Paris, France}}
+      {{SGA - Ministère de la Défense}}{{Septembre 2025 -- Aujourd'hui}}
+      \resumeItemListStart
+        \resumeItem{{Concevoir et développer un dispositif innovant pour les applications de défense, intégrant l'Intelligence Artificielle embarquée sur une carte matérielle dédiée.}}
+        \resumeItem{{Responsable du cycle de vie complet du projet, de la conception de l'architecture matérielle/logicielle à la sélection du modèle d'IA et à l'optimisation des contraintes intégrées.}}
+        \resumeItem{{Mettre en œuvre des solutions de connectivité robustes en mettant l'accent sur la sécurité et la confidentialité des données.}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {{Fondateur et exploitant (auto-entrepreneur)}}{{Angers, France}}
+      {{Génie Propre}}{{Octobre 2024 -- Aujourd'hui}}
+      \resumeItemListStart
+        \resumeItem{{Lancement et gestion d'une entreprise de services de nettoyage pour des clients des secteurs privé et public.}}
+        \resumeItem{{Superviser toutes les opérations commerciales, y compris l'acquisition de clients, la prestation de services et la gestion administrative, en démontrant de solides compétences organisationnelles et entrepreneuriales.}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {{Former Agent de Service Commercial (ASCT)}}{{Nantes, France}}
+      {{SNCF Voyageurs}}{{Été 2023}}
+      \resumeItemListStart
+        \resumeItem{{Assurer la sûreté, la sécurité et la qualité de service de milliers de passagers de trains régionaux (TER), titulaires du statut d'officier assermenté auprès du tribunal judiciaire d'Angers.}}
+        \resumeItem{{A complété une certification rigoureuse d'un mois et demi sur les protocoles de sécurité, les procédures de sécurité, la gestion des équipements et les opérations commerciales.}}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{{Leadership et bénévolat}}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {{\textbf{{Membre du BDE et du Bureau des Sports}} $|$ \emph{{ESEO}}}}{{2024 -- Present}}
+        \resumeItemListStart
+          \resumeItem{{Co-organiser des événements de la vie étudiante et soutenir les initiatives à l’échelle de l’école.}}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {{\textbf{{Membre, Unité contre le harcèlement et la violence}} $|$ \emph{{ESEO}}}}{{2024 -- Present}}
+        \resumeItemListStart
+          \resumeItem{{Apporter un soutien confidentiel aux étudiants et contribuer aux campagnes de prévention.}}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{{Prix ​​et certifications}}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {{\textbf{{Gagnant du 1er prix, concours d'art oratoire}} $|$ \emph{{ESEO}}}}{{Jan 2025}}
+    \resumeProjectHeading
+        {{\textbf{{Certifié en gestion de projet}} $|$ \emph{{MOOC Gestion de Projet}}}}{{Feb 2023}}
+    \resumeProjectHeading
+        {{\textbf{{Certificat d'Initiation Aéronautique}} $|$ \emph{{Brevet d'Initiation 
+Aéronautique}}}}{{Jun 2021}}
+  \resumeSubHeadingListEnd
+
+\end{{document}}
