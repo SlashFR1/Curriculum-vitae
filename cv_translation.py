@@ -1,4 +1,6 @@
 from deep_translator import GoogleTranslator
+import subprocess
+
 
 cv_data = {
     "role_title": "Master of Science in Computer Science",
@@ -232,12 +234,21 @@ Aéronautique}}}}{{Jun 2021}}
 \end{{document}}
 """
 
+def fill_template(template, data):
+    """Remplacer manuellement les clés pour éviter les conflits avec LaTeX"""
+    text = template
+    for key, value in data.items():
+        # On remplace {clé} par la valeur
+        text = text.replace("{" + key + "}", str(value))
+    return text
+
 def generate_translated_cv(target_lang='fr'):
     print(f" Translating to: {target_lang} ...")
     
     translated_data = {}
     translator = GoogleTranslator(source='auto', target=target_lang)
 
+    # Traduction de chaque champ
     for key, text in cv_data.items():
         try:
             if not text or len(text) < 2:
@@ -248,23 +259,44 @@ def generate_translated_cv(target_lang='fr'):
             print(f"Translation error on {key}: {e}")
             translated_data[key] = text
 
-    final_latex = latex_template
-    for key, value in translated_data.items():
-        final_latex = final_latex.replace("{" + key + "}", str(value))
+    # Génération du LaTeX traduit
+    final_latex = fill_template(latex_template, translated_data)
     
     filename = f"cv_louis_baffour_{target_lang}.tex"
     with open(filename, "w", encoding="utf-8") as f:
         f.write(final_latex)
     
     print(f" File generated successfully: {filename}")
+    
+    # Important : on retourne le texte pour la compilation PDF
+    return final_latex
 
 if __name__ == "__main__":
     langue = input("Which language? (fr = French, es = Spanish, de = German, en = English): ").strip()
     
+    final_latex = ""
+
     if langue == 'en':
-        final_latex = latex_template.format(**cv_data)
+        # En anglais, pas besoin de traduction
+        final_latex = fill_template(latex_template, cv_data)
         with open("cv_louis_baffour_en.tex", "w", encoding="utf-8") as f:
             f.write(final_latex)
         print(" English file generated.")
     else:
-        generate_translated_cv(langue)
+        # Autres langues : traduction
+        final_latex = generate_translated_cv(langue)
+        
+    # Écriture du fichier temporaire pour compilation
+    if final_latex:
+        with open("cv.tex", "w", encoding="utf-8") as f:
+            f.write(final_latex)
+
+        print(" Compiling PDF...")
+        try:
+            # Compilation deux fois pour les références si nécessaire (optionnel)
+            subprocess.run(["pdflatex", "-interaction=nonstopmode", "cv.tex"], check=True)
+            print(" PDF Compiled successfully (cv.pdf)")
+        except subprocess.CalledProcessError:
+            print(" Error during PDF compilation. Check cv.log.")
+    else:
+        print(" Error: No LaTeX content generated.")
